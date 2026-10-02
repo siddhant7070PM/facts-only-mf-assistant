@@ -1,0 +1,84 @@
+Scheme: SBI Bluechip Fund
+Document: Scheme Information Document (SID)
+Benchmark: BSE 100 TRI (Total Return Index).
+Investment Objective: To provide investors with opportunities for long-term growth in capital through an active management of investments in a diversified basket of large cap equity stocks.
+Source: https://www.sbimf.com/en-us/sbi-bluechip-fund-sid
+
+Scheme: SBI Bluechip Fund
+Document: Factsheet October 2026
+Expense Ratio: The Direct Plan has an expense ratio of 0.85%, while the Regular Plan has an expense ratio of 1.58%.
+Riskometer: The scheme is categorized as "Very High" on the Riskometer.
+Source: https://www.sbimf.com/en-us/factsheets/sbi-bluechip-fund
+
+Scheme: SBI Bluechip Fund
+Document: Key Information Memorandum (KIM)
+Minimum SIP: The minimum SIP (Systematic Investment Plan) amount is INR 500.
+Minimum Lumpsum: The minimum initial investment amount is INR 5,000.
+Source: https://www.sbimf.com/en-us/sbi-bluechip-fund-kim
+
+Scheme: SBI Bluechip Fund
+Document: AMFI Scheme Details Page
+Exit Load: An exit load of 1% is applicable if units are redeemed or switched out within 1 year from the date of allotment. Nil exit load after 1 year.
+Source: https://www.amfiindia.com/investor-corner/sbi-bluechip-details
+
+Scheme: SBI Flexicap Fund
+Document: Scheme Information Document (SID)
+Benchmark: BSE 500 TRI (Total Return Index).
+Investment Objective: To provide investors with opportunities for long-term growth in capital by investing in a diversified portfolio of equity and equity-related instruments across large cap, mid cap, and small cap companies.
+Source: https://www.sbimf.com/en-us/sbi-flexicap-fund-sid
+
+Scheme: SBI Flexicap Fund
+Document: Factsheet October 2026
+Expense Ratio: The Direct Plan has an expense ratio of 0.82%. 
+Riskometer: Very High.
+Source: https://www.sbimf.com/en-us/factsheets/sbi-flexicap-fund
+
+Scheme: SBI Flexicap Fund
+Document: Key Information Memorandum (KIM)
+Minimum SIP: INR 500 per month.
+Exit Load: 10% of the investment can be redeemed without exit load within 1 year. For the remaining investment, a 1% exit load applies if redeemed within 1 year. Nil after 1 year.
+Source: https://www.sbimf.com/en-us/sbi-flexicap-fund-kim
+
+Scheme: SBI Flexicap Fund
+Document: SEBI Scheme Information
+Category: Flexi Cap Fund - An open ended dynamic equity scheme investing across large cap, mid cap, small cap stocks.
+Source: https://www.sebi.gov.in/mutual-funds/sbi-flexicap-profile
+
+Scheme: SBI Long Term Equity Fund (ELSS)
+Document: Scheme Information Document (SID)
+Benchmark: BSE 500 TRI.
+Category: ELSS (Equity Linked Savings Scheme).
+Source: https://www.sbimf.com/en-us/sbi-long-term-equity-fund-sid
+
+Scheme: SBI Long Term Equity Fund (ELSS)
+Document: Key Information Memorandum (KIM)
+Lock-in Period: This scheme has a mandatory statutory lock-in period of 3 years from the date of allotment.
+Exit Load: Nil (because units cannot be redeemed before the 3-year lock-in period expires).
+Source: https://www.sbimf.com/en-us/sbi-long-term-equity-fund-kim
+
+Scheme: SBI Long Term Equity Fund (ELSS)
+Document: AMFI Tax Benefits Guide
+Tax Benefit: Investments up to Rs. 1.5 Lakhs in a financial year are eligible for deduction under Section 80C of the Income Tax Act, 1961.
+Minimum SIP: INR 500.
+Source: https://www.amfiindia.com/investor-corner/elss-tax-benefits
+
+Scheme: SBI Long Term Equity Fund (ELSS)
+Document: Factsheet October 2026
+Expense Ratio: Direct Plan expense ratio is 0.96%.
+Riskometer: Very High.
+Source: https://www.sbimf.com/en-us/factsheets/sbi-long-term-equity-fund
+
+General AMC Information: Account Statements
+Document: SBI MF Investor Services
+How to download statements: Investors can download their account statements by visiting the SBI Mutual Fund website, clicking on 'Investor Services', selecting 'Statement of Account', and entering their PAN or Folio Number.
+Source: https://www.sbimf.com/en-us/investor-services/account-statement
+
+General AMC Information: Capital Gains
+Document: SBI MF Tax Centre
+How to download capital gains statement: To download a capital gains statement for tax filing, log in to the SBI MF portal, navigate to the 'Statements' section, select 'Capital Gains Statement', choose the financial year, and click download.
+Source: https://www.sbimf.com/en-us/investor-services/capital-gains
+
+General AMC Information: Grievance Redressal
+Document: SEBI Investor Grievance Portal
+Complaints: Investors can escalate unresolved complaints regarding mutual funds to SEBI via the SCORES (SEBI Complaints Redress System) portal.
+Source: https://scores.sebi.gov.in/
