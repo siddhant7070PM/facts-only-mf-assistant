@@ -30,14 +30,14 @@ def load_rag_model():
     loader = TextLoader("knowledge_base.txt")
     docs = loader.load()
     
-    # 1. This MUST remain the MiniLM model for embeddings
+    # 1. Embeddings remain on the lightweight MiniLM model
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     vector_store = FAISS.from_documents(docs, embeddings)
     retriever = vector_store.as_retriever(search_kwargs={"k": 2})
     
-    # 2. This is where the Groq AI model goes
+    # 2. ChatGroq points to the active 2026 model
     llm = ChatGroq(
-        model_name="llama-3.3-70b-versatile", 
+        model_name="openai/gpt-oss-20b", 
         temperature=0.1,
         groq_api_key=groq_api_key
     )
