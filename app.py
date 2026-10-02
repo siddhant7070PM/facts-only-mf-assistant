@@ -30,12 +30,14 @@ def load_rag_model():
     loader = TextLoader("knowledge_base.txt")
     docs = loader.load()
     
-    embeddings = HuggingFaceEmbeddings(model_name="openai/gpt-oss-20b")
+    # 1. This MUST remain the MiniLM model for embeddings
+    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     vector_store = FAISS.from_documents(docs, embeddings)
     retriever = vector_store.as_retriever(search_kwargs={"k": 2})
     
+    # 2. This is where the Groq AI model goes
     llm = ChatGroq(
-        model_name="llama-3.1-8b-instant", 
+        model_name="llama-3.3-70b-versatile", 
         temperature=0.1,
         groq_api_key=groq_api_key
     )
@@ -70,5 +72,8 @@ else:
     user_query = st.text_input("Ask a factual question about SBI Mutual Fund schemes:")
     if user_query:
         with st.spinner("Searching verified sources..."):
-            response = chain.run(user_query)
-            st.write(response)
+            try:
+                response = chain.run(user_query)
+                st.write(response)
+            except Exception as e:
+                st.error(f"API Connection Error: {str(e)}")
