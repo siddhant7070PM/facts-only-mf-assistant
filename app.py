@@ -1,16 +1,4 @@
 import os
-import ssl
-
-# --- FIX FOR WINDOWS SSL CERTIFICATE ERROR ---
-try:
-    _create_unverified_https_context = ssl._create_unverified_context
-except AttributeError:
-    pass
-else:
-    ssl._create_default_https_context = _create_unverified_https_context
-os.environ['CURL_CA_BUNDLE'] = ''
-# ---------------------------------------------
-
 import streamlit as st
 from langchain_community.document_loaders import TextLoader
 from langchain_community.embeddings import HuggingFaceEmbeddings
@@ -19,8 +7,11 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
 from langchain_classic.chains import RetrievalQA
 
-# --- IMPORTANT: Put your actual Groq API key inside the quotes below ---
-os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY", "")
+# Retrieve Groq API Key safely from Streamlit Secrets or Environment Variables
+groq_api_key = st.secrets.get("GROQ_API_KEY") or os.getenv("GROQ_API_KEY")
+
+if groq_api_key:
+    os.environ["GROQ_API_KEY"] = groq_api_key
 
 st.set_page_config(page_title="Facts-Only MF Assistant", page_icon="📈")
 st.title("📈 Facts-Only MF Assistant (Groww)")
@@ -43,7 +34,11 @@ def load_rag_model():
     vector_store = FAISS.from_documents(docs, embeddings)
     retriever = vector_store.as_retriever(search_kwargs={"k": 2})
     
-    llm = ChatGroq(model_name="openai/gpt-oss-20b", temperature=0.1)
+    llm = ChatGroq(
+        model_name="llama-3.1-8b-instant", 
+        temperature=0.1,
+        groq_api_key=groq_api_key
+    )
     
     prompt_template = """
     You are a factual Mutual Fund assistant. 
@@ -67,10 +62,13 @@ def load_rag_model():
         chain_type_kwargs={"prompt": PROMPT}
     )
 
-chain = load_rag_model()
+if not groq_api_key:
+    st.error("Groq API Key is missing. Please add GROQ_API_KEY to your Streamlit Cloud Secrets.")
+else:
+    chain = load_rag_model()
 
-user_query = st.text_input("Ask a factual question about SBI Mutual Fund schemes:")
-if user_query:
-    with st.spinner("Searching verified sources..."):
-        response = chain.run(user_query)
-        st.write(response)
+    user_query = st.text_input("Ask a factual question about SBI Mutual Fund schemes:")
+    if user_query:
+        with st.spinner("Searching verified sources..."):
+            response = chain.run(user_query)
+            st.write(response)
